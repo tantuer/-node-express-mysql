@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <% include public/head.ejs %>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="ft-bg">
+        <div class="inner-con">
+          <div class="wcenter">
+            <ul class="news-list">
+              <% for(var i=0; i < lists.length; i++) {%>
+              <li class="news-item">
+                <h5>
+                  <a href="<%=curUrl%>/<%= lists[i].id %>"
+                    ><i class="icon icon-dot"></i>
+                    <%= lists[i].title %>
+                  </a>
+                  <span class="time"><%= lists[i].update_time %></span>
+                </h5>
+                <p><%= lists.des %></p>
+              </li>
+              <%}%>
+            </ul>
+            <% include public/pagination.ejs %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

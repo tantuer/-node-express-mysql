@@ -1,0 +1,33 @@
+<div class="pages-cont">
+  <div class="pages-list">
+    <ul class="pagination">
+      <% if (pagination.prev){ %>
+
+      <li class="prev">
+        <a href="?page=<%= pagination.prev %>">上一页</a>
+      </li>
+      <% } else { %>
+      <li class="prev disable">
+        <span>上一页</span>
+      </li>
+      <%}%> <% for (var i=0; i < pagination.group.length; i++) { %>
+      <li <% if ( pagination.group[i]== pagination.current ) { %> class="active" <% } %> >
+        <a href="?page=<%=pagination.group[i]%>"><%=pagination.group[i]%></a>
+      </li>
+      <% } %> <% if (pagination.next){ %>
+
+      <li class="next">
+        <a href="?page=<%=pagination.next %>">下一页x</a>
+      </li>
+      <% } else { %>
+      <li class="next disable">
+        <span>下一页</span>
+      </li>
+      <%}%>
+
+      <li class="input-cont">
+        总共<%=pagination.totalPage%>页
+      </li>
+    </ul>
+  </div>
+</div>
