@@ -25,10 +25,10 @@ database: 'test' // 创建的数据库名
 npm start  
 启动地址:http://localhost:3004  
 启动之后，程序会自动往 test 数据库中插入数据表 news（如果该表不存在）  
-此时可访问 http://localhost:3004/news 读取数据表的 news 的数据
+此时可访问 http://localhost:3004/api/news 读取数据表的 news 的数据
 
-GET http://localhost:3004/news 读取列表  
-POST http://localhost:3004/news 添加数据  
-PUT http://localhost:3004/news/:id 修改此 id 的数据内容  
-DELETE http://localhost:3004/news/:id 删除该 id 的数据  
-GET http://localhost:3004/news/:id 读取该 id 的数据内容
+GET http://localhost:3004/api/news 读取列表  
+POST http://localhost:3004/api/news 添加数据  
+PUT http://localhost:3004/api/news/:id 修改此 id 的数据内容  
+DELETE http://localhost:3004/api/news/:id 删除该 id 的数据  
+GET http://localhost:3004/api/news/:id 读取该 id 的数据内容
