@@ -12,7 +12,7 @@ const news = `CREATE TABLE if not exists news (
         update_time datetime DEFAULT NULL COMMENT '更新时间',
         is_redirect int(1) DEFAULT 0 COMMENT '是否跳转到第三方，1--》是,0->否',
         redirect_url varchar(255) DEFAULT NULL COMMENT '标题',
-        click_num int(11) DEFAULT NULL COMMENT '点击次数',
+        click_num int(11) DEFAULT 0 COMMENT '点击次数',
         PRIMARY KEY (id)
       ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4`;
 
